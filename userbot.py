@@ -7,7 +7,7 @@ api_id = int(os.getenv('API_ID'))
 api_hash = os.getenv('API_HASH')
 
 # Список для отслеживания — укажи username или id
-watch_list = ['@username1', '@username2']
+watch_list = ['@Uuycycysuvydr', '@mifistori']
 
 client = TelegramClient('userbot_session', api_id, api_hash)
 last_status = {}
