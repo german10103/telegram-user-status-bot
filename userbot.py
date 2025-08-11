@@ -3,8 +3,8 @@ import asyncio
 from datetime import datetime
 from telethon import TelegramClient, events
 
-api_id = int(os.getenv('API_ID'))
-api_hash = os.getenv('API_HASH')
+api_id = int(os.getenv('20211284'))
+api_hash = os.getenv('50af57e706e5517aa5991b7ce7049c5d')
 
 # Список для отслеживания — укажи username или id
 watch_list = ['@Uuycycysuvydr', '@mifistori']
