@@ -2,16 +2,12 @@ import os
 import asyncio
 from datetime import datetime
 from telethon import TelegramClient, events
-
-api_id = int(os.getenv('20211284'))
-api_hash = os.getenv('50af57e706e5517aa5991b7ce7049c5d')
-
+api_id = int(os.getenv('API_ID'))
+api_hash = os.getenv('API_HASH')
 # Список для отслеживания — укажи username или id
 watch_list = ['@Uuycycysuvydr', '@mifistori']
-
 client = TelegramClient('userbot_session', api_id, api_hash)
 last_status = {}
-
 @client.on(events.UserUpdate)
 async def user_update_handler(event):
     user_id = event.user_id
@@ -29,11 +25,9 @@ async def user_update_handler(event):
         msg = f"⚡ Пользователь {entity.first_name} (@{entity.username}) {status_text} — {now}"
         print(msg)
         await client.send_message('me', msg)
-
 async def main():
     await client.start()
     print("Бот запущен и работает...")
     await asyncio.Event().wait()
-
 if __name__ == "__main__":
     asyncio.run(main())
